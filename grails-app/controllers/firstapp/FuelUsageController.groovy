@@ -1,5 +1,8 @@
 package firstapp
 
+import grails.converters.JSON
+import grails.converters.XML
+
 class FuelUsageController {
 
     FuelCostService fuelCostService
@@ -14,7 +17,12 @@ class FuelUsageController {
     }
 
     def saveNewCar(){
-        render fuelCostService.saveCar("Focus", "Ford", "diesel", 6.2, 1.6)
+        Car car = fuelCostService.saveCar("Focus", "Ford", "diesel", 6.2, 1.6)
+        render car as JSON
+    }
 
+
+    def showAllCars(){
+        render view: 'showAllCars', model: [carList: Car.list()]
     }
 }

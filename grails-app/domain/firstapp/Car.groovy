@@ -11,4 +11,9 @@ class Car {
 
     static constraints = {
     }
+
+
+    public String toString(){
+        return "Model: " + model.name + " Producer: " + producer.name + " ID: " + id
+    }
 }
