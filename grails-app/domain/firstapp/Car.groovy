@@ -2,12 +2,12 @@ package firstapp
 
 class Car {
 
-    String model
-    String producer
+    Model model
+    Producer producer
     Double fuelConsumption
-    String fuelType
+    FuelType fuelType
     Double engineVolume
-    Integer number
+
 
     static constraints = {
     }
