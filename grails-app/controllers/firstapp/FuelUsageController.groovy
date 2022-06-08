@@ -5,7 +5,7 @@ class FuelUsageController {
     FuelCostService fuelCostService
 
     def index() {
-        render "Slava Ukrainie"
+        render "Heroyam Slava"
     }
 
     def drivingPrice(){
